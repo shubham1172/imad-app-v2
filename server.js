@@ -19,7 +19,7 @@ app.get('/ui/madi.png', function (req, res) {
 
 counter = 0;
 app.get('/counter', function(req, res){
-   res.send(json.stringify(counter));
+   res.send(JSON.stringify(counter));
 });
 
 app.get('/increment', function(req, res){
