@@ -23,13 +23,10 @@ app.get('/ui/main.js', function (req, res) {
 
 counter = 0;
 app.get('/counter', function(req, res){
+   counter+=1;
    res.send(JSON.stringify(counter));
 });
 
-app.get('/increment', function(req, res){
-    counter++;
-    res.send("incremented");
-});
 
 var port = 8080; 
 app.listen(8080, function () {
