@@ -19,12 +19,12 @@ app.get('/ui/madi.png', function (req, res) {
 
 counter = 0;
 app.get('/counter', function(req, res){
-   res.status(200).send(json.stringify(counter));
+   res.send(json.stringify(counter));
 });
 
 app.get('/increment', function(req, res){
     counter++;
-    res.status(200).send("incremented");
+    res.send("incremented");
 });
 
 var port = 8080; 
