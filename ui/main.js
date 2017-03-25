@@ -17,11 +17,8 @@ window.onload = function(){
     //updates progress bar
     function updateProgress(){
         $('.progress-bar').width(progress+'%').attr('aria-valuenow', progress).html(progress+"%");
-        progress+=5;
+        progress+=1;
     }
     
-    for(var i=0;i<20;i++){
-        updateProgress();
-        delay(250);
-    }
+    setInterval(updateProgress(), 50);
 };
