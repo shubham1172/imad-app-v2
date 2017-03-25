@@ -18,9 +18,10 @@ window.onload = function(){
     function updateProgress(){
         $('.progress-bar').width(progress+'%').attr('aria-valuenow', progress).html(progress+"%");
         progress+=5;
-        if(progress==100)
-            clearInterval(interval);
     }
     
-    var interval = setInterval(updateProgress(), 50);
+    for(var i=0;i<20;i++){
+        updateProgress();
+        sleep(250);
+    }
 };
