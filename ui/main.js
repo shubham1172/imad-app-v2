@@ -15,7 +15,7 @@ window.onload = function(){
     
 	function displayUI(){
 		$(".container").css("display", "block");
-		$(".progress-bar").css("display", "none");
+		$(".progress-container").css("display", "none");
 	}
 	
     var progress = 0;
