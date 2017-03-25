@@ -22,7 +22,7 @@ window.onload = function(){
     //updates progress bar
     function updateProgress(){
         $('.progress-bar').width(progress+'%').attr('aria-valuenow', progress).html(progress+"%");
-		console.log("test");
+		//console.log("test");
         progress+=1;
 		if(progress==101){
 			clearInterval(ref);
