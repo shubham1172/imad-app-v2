@@ -13,12 +13,22 @@ window.onload = function(){
         document.getElementById("removable").innerHTML = "";
     };
     
+	function displayUI(){
+		$(".container").css("display", "block");
+		$(".progress-bar").css("display", "none");
+	}
+	
     var progress = 0;
     //updates progress bar
     function updateProgress(){
         $('.progress-bar').width(progress+'%').attr('aria-valuenow', progress).html(progress+"%");
+		console.log("test");
         progress+=1;
+		if(progress==101){
+			clearInterval(ref);
+			displayUI();
+		}
     }
-    
-    setInterval(updateProgress(), 50);
+	
+    var ref = setInterval(updateProgress, 50);
 };
