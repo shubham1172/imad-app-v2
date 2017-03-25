@@ -9,7 +9,7 @@ window.onload = function(){
     xhttp.open("GET", "/counter", true);
     xhttp.send();   
     
-    var container = document.getElementById("container");
+    var container = document.getElementsByClassName("container");
     container.onclick = function(){
         document.getElementById("removable").innerHTML = "";
     };
