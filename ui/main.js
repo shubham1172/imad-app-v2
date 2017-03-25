@@ -12,4 +12,15 @@ window.onload = function(){
     window.onclick = function(){
         document.getElementById("removable").innerHTML = "";
     };
+    
+    var progress = 0;
+    //updates progress bar
+    function updateProgress(){
+        $('.progress-bar').width(progress+'%').attr('aria-valuenow', progress).html(progress+"%");
+        progress+=5;
+        if(progress==100)
+            clearInterval(interval);
+    }
+    
+    var interval = setInterval(updateProgress(), 50);
 };
